@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc1.Data;
 using SalesWebMvc.Data;
+using SalesWebMvc1.Services;
 
 namespace SalesWebMvc1
 {
@@ -42,6 +43,7 @@ namespace SalesWebMvc1
             builder.MigrationsAssembly("SalesWebMvc1")));
 
              services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
             
         }
 
