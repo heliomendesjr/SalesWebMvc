@@ -42,9 +42,10 @@ namespace SalesWebMvc1
                     options.UseMySql(Configuration.GetConnectionString("SalesWebMvc1Context"), builder =>
             builder.MigrationsAssembly("SalesWebMvc1")));
 
-             services.AddScoped<SeedingService>();
+            services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
-            
+            services.AddScoped<DepartmentService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
